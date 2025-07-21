@@ -5,90 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | GoDrive Nashik</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .glow-on-scroll {
-      animation: smoothGlow 1.5s ease-in-out forwards;
-    }
-
-    @keyframes smoothGlow {
-      0% {
-        text-shadow: none;
-        opacity: 0.6;
-      }
-      100% {
-        text-shadow: 0 0 8px #3b82f6, 0 0 16px #60a5fa;
-        opacity: 1;
-      }
-    }
-  </style>
 </head>
 
-<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white">
+<body class="bg-gradient-to-tr from-blue-50 via-white to-blue-100 text-gray-800">
 
-<!-- Navbar -->
-<nav class="bg-white shadow-md py-4 px-4 sm:px-8 flex justify-between items-center sticky top-0 z-50">
-  <div class="text-xl font-bold text-blue-600">GoDrive Nashik</div>
-  <div class="flex flex-wrap items-center gap-2">
-    <a href="/" class="text-gray-700 hover:text-blue-600 mx-2">Home</a>
-    <a href="/cars" class="text-gray-700 hover:text-blue-600 mx-2 font-semibold">Cars</a>
-    <a href="/about" class="text-gray-700 hover:text-blue-600 mx-2">About</a>
-    <a href="tel:+919999999999"
-       class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg ml-2 transition duration-300">
-      Call Now
-    </a>
-  </div>
-</nav>
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md py-4 px-4 sm:px-8 flex justify-between items-center sticky top-0 z-50">
+    <div class="text-2xl font-bold text-blue-600">GoDrive Nashik</div>
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/" class="text-gray-700 hover:text-blue-600 mx-2">Home</a>
+      <a href="/cars" class="text-gray-700 hover:text-blue-600 mx-2 font-semibold">Cars</a>
+      <a href="/about" class="text-gray-700 hover:text-blue-600 mx-2">About</a>
+      <a href="tel:+919999999999"
+         class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg ml-2 transition duration-300">
+        Call Now
+      </a>
+    </div>
+  </nav>
 
-<!-- About Section -->
-<section class="py-12 px-4 sm:px-8">
-  <div class="max-w-4xl mx-auto bg-white text-gray-800 rounded-xl shadow-md p-6 sm:p-10 transition-all duration-700 animate-fade-in">
-    <h2 class="text-3xl sm:text-4xl font-bold text-blue-700 mb-6 text-center">About GoDrive Nashik</h2>
+  <!-- Header -->
+  <header class="text-center py-12 px-4">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-blue-700 mb-4 animate-pulse">About GoDrive Nashik</h1>
+    <p class="text-lg text-gray-600 max-w-xl mx-auto">Your trusted self-drive car rental in Nashik, made simple and affordable.</p>
+  </header>
 
-    <div class="mb-6">
-      <p class="text-base sm:text-lg mb-4">
-        GoDrive Nashik is a local car rental service based in Nashik, Maharashtra. Our goal is to provide clean, reliable, and affordable self-drive cars for daily use, road trips, or local travel.
+  <!-- About Section -->
+  <section class="py-10 px-4 sm:px-8">
+    <div class="max-w-4xl mx-auto bg-white/80 backdrop-blur-md shadow-2xl rounded-2xl p-8 transition duration-500 hover:shadow-blue-200">
+      <p class="text-base sm:text-lg mb-4 leading-relaxed">
+        GoDrive Nashik is a local self-drive car rental service focused on simplicity and reliability. Whether you're a tourist or a resident, we provide clean and comfortable cars like Swift, Dzire, and Ertiga at budget-friendly rates.
       </p>
-      <p class="text-base sm:text-lg mb-4">
-        Whether you're a tourist exploring the vineyards and temples of Nashik, or a local looking for flexible travel, our fleet includes top picks like the Swift, Swift Dzire, and Ertiga.
+      <p class="text-base sm:text-lg mb-4 leading-relaxed">
+        No paperwork hassles. No long queues. Just book, drive, and go wherever the road takes you with confidence and support from our team.
       </p>
-      <p class="text-base sm:text-lg">
-        We are committed to quality service, timely support, and a smooth booking experience — all without the need for long paperwork or complicated processes. Just call, book, and drive!
+      <p class="text-base sm:text-lg leading-relaxed">
+        Explore Nashik’s vineyards, temples, and scenic routes at your own pace with GoDrive!
       </p>
     </div>
+  </section>
 
-    <!-- Owner Section -->
-    <div class="text-center mt-10">
-      <h3 class="text-2xl sm:text-3xl font-semibold mb-6">Meet the Owner</h3>
-      <div class="flex flex-col items-center">
-        <div class="w-40 h-40 sm:w-56 sm:h-56 rounded-full overflow-hidden shadow-lg mb-4 border-4 border-blue-600">
-          <img src="{{ url_for('static', filename='img/owner.png') }}" alt="Owner Photo" class="w-full h-full object-cover" />
-        </div>
-        <h4 class="text-xl sm:text-2xl font-semibold text-blue-600">Karan Rokade</h4>
-        <p class="max-w-lg text-gray-600 mt-2 px-4">
-          Karan is the visionary behind GoDrive Nashik, committed to offering hassle-free self-drive car rentals with quality service in Nashik city.
+  <!-- Owner Section -->
+  <section class="py-12 px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-700 mb-6">Meet the Owner</h2>
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-8">
+      <div class="w-44 h-44 sm:w-56 sm:h-56 rounded-full overflow-hidden shadow-xl border-4 border-blue-400 transform hover:scale-105 transition duration-500">
+        <img src="{{ url_for('static', filename='img/owner.png') }}" alt="Owner Photo" class="w-full h-full object-cover" />
+      </div>
+      <div class="max-w-md text-left">
+        <h3 class="text-2xl font-semibold text-blue-600">Karan Rokade</h3>
+        <p class="text-gray-600 mt-2">
+          Founder of GoDrive Nashik. Passionate about transforming travel in Nashik with comfort, speed, and service-first mindset.
         </p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer id="footer" class="bg-white border-t mt-10 py-6 text-center text-sm text-gray-600">
-  &copy; 2025 GoDrive Nashik. All rights reserved.<br />
-  Made with ❤️ by <span id="footerName" class="text-blue-600 font-semibold">Kalpesh Patil</span>
-</footer>
-
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        document.getElementById('footerName').classList.add('glow-on-scroll');
-        observer.disconnect(); // only once
-      }
-    });
-  });
-  observer.observe(document.getElementById('footer'));
-</script>
+  <!-- Footer -->
+  <footer id="footer" class="bg-white text-center py-6 mt-10 text-sm text-gray-500 border-t">
+    &copy; 2025 GoDrive Nashik. All rights reserved.<br />
+    Made with ❤️ by <span class="text-blue-600 font-semibold animate-glow">Kalpesh Patil</span>
+  </footer>
 
 </body>
 </html>
